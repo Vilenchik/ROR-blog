@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 
-gem 'bootstrap', '~> 4.0.0.alpha4'
+gem "bootstrap", ">= 4.3.1"
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
