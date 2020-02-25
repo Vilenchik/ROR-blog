@@ -1,0 +1,27 @@
+<article class="post">
+
+  <section class="post-head">
+    <h2><%= link_to post.title, post_path(post) %></h2>
+    <small>
+      <table>
+        <tr>
+          <th> <time><%= post.created_at.to_date.strftime("%d %B, %Y") %></time> </th>
+          <% if user_signed_in? && post.user_id == current_user.id  %>
+            <th> <%= link_to t('.edit'), edit_post_path(post), :class => "btn btn-warning" %> </th>
+            <th> <%= button_to t('.delete'), post_path(post), method: :delete, :class => 'btn btn-danger' %> </th>
+          <% end %>
+        </tr>
+      </table>
+    </small>
+  </section>
+
+  <section class="post-summary clearfix">
+    <table>
+      <tr>
+        <th> <%= image_tag post.image.url(:thumb), class: 'img-show collapse' if post.image? %> </th>
+        <th class='font-weight-normal'> <%= post.summary %> </th>
+      </tr>
+    </table>
+  </section>
+
+</article>

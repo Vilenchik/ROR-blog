@@ -1,0 +1,58 @@
+ru:
+  devise:
+    passwords:
+      new:
+        for: 'Забыли пароль?'
+        send: 'Отправьте мне инструкции по сбросу пароля'
+      edit:
+        chng: 'Поменяйте ваш пароль'
+        np: 'Новый пароль'
+        cnp: 'Подтвердите новый пароль'
+        min: 'символов минимум)'
+    sessions:
+      new:
+        sin: 'Вход'
+        sinn: 'Войти'
+        for: 'Забыли пароль?'
+    registrations:
+      new:
+        sin: 'Регистрация'
+        sinn: 'Зарегистрироваться'
+      edit:
+        ed: 'Изменить данные'
+        back: 'Назад'
+        update: 'Обновть данные'
+        min: 'символов минимум'
+  common:
+    errors: 'При заполнении формы возникли ошибки'
+    back: 'Назад'
+    create: 'Создать'
+    edit: 'Изменить'
+  will_paginate:
+    previous_label: '&larr; Туда'
+    next_label: 'Сюда &rarr;'
+  layouts:
+    application:
+      allp: 'Все статьи'
+      newp: 'Новая статья'
+      sout: 'Выход'
+      sin: 'Вход'
+      regg: 'Регистрация'
+      edit: 'Редактировать данные пользователя'
+      myp: 'Мои статьи'
+  posts:
+    post:
+      edit: 'Редактировать статью'
+      delete: 'Удалить статью'
+    show:
+      edit: 'Редактировать статью'
+      delete: 'Удалить статью'
+    index:
+      title: 'Статьи'
+    new:
+      title: 'Новая статья'
+    edit:
+      title: 'Редактирование статьи'
+    form:
+      submit:
+        '%{action} статью'

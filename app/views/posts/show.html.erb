@@ -1,0 +1,25 @@
+<article class="post">
+
+  <section class="post-head">
+    <h1><%= @post.title %></h1>
+    <small>
+      <table>
+        <tr>
+          <th> <time><%= @post.created_at.to_date.strftime("%d %B, %Y") %></time> </th>
+          <% if user_signed_in? && @post.user_id == current_user.id  %>
+            <th> <%= link_to t('.edit'), edit_post_path(@post), :class => "btn btn-warning" %> </th>
+            <th> <%= button_to t('.delete'), post_path(@post), method: :delete, :class => 'btn btn-danger' %> </th>
+          <% end %>
+        </tr>
+      </table>
+    </small>
+  </section>
+
+  <section class="post-body">
+    <%= image_tag @post.image.url(:large), class: 'img-show collapse rounded mx-auto d-block' if @post.image? %>
+    <%= @post.body.html_safe %>
+  </section>
+
+</article>
+
+<%= render 'disqus' %>

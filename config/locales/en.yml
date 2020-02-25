@@ -1,0 +1,58 @@
+en:
+  devise:
+    passwords:
+      new:
+        for: 'Forgot you password?'
+        send: 'Send me reset password instructions'
+      edit:
+        chng: 'Change your password'
+        np: 'New password'
+        cnp: 'Confirm new password'
+        min: 'characters minimum)'
+    sessions:
+      new:
+        sin: 'Log in'
+        sinn: 'Log in'
+        for: 'Forgot your password?'
+    registrations:
+      new:
+        sin: 'Sign up'
+        sinn: 'Sign up'
+      edit:
+        ed: 'Edit'
+        back: 'Back'
+        update: 'Update'
+        min: 'characters minimum'
+  common:
+    errors: 'You have errors'
+    back: 'Back'
+    create: 'Create'
+    edit: 'Edit'
+  will_paginate:
+    previous_label: '&larr;'
+    next_label: '&rarr;'
+  layouts:
+    application:
+      allp: 'All posts'
+      newp: 'New post'
+      sout: 'Log out'
+      sin: 'Log in'
+      regg: 'Sign up'
+      edit: 'Edit user data'
+      myp: 'My posts'
+  posts:
+    show:
+      edit: 'Edit post'
+      delete: 'Delete post'
+    index:
+      title: 'Posts'
+    new:
+      title: 'New post'
+    edit:
+      title: 'Edit post'
+    form:
+      submit:
+        '%{action} post'
+    post:
+      edit: 'Edit post'
+      delete: 'Delete post'

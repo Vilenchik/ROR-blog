@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab13</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+        <div class="collapse navbar-collapse" id="navbarText">
+          <table>
+            <tr>
+              <th> <%= link_to t('.allp'), posts_path, class: 'btn btn-outline-primary' %> </th>
+              <% if user_signed_in? %>
+                <th> <%= link_to t('.newp'), new_post_path, class: 'btn btn-outline-primary' %> </th>
+              <% end %>
+            </tr>
+          </table>
+        </div>
+
+        <div class="navbar-nav pull-xs-right">
+          <table>
+            <tr>
+              <% if user_signed_in? %>
+                <th> <a> <%= button_to t('.edit'), edit_user_registration_path, :method => "get", class: "btn btn-outline-warning" %> </a> </th>
+                <th> <a> <%= button_to t('.sout'), destroy_user_session_path, method: :delete, class: "btn btn-outline-warning" %> </a> </th>
+              <% else %>
+              <th> <a> <%= link_to t('.sin'), new_user_session_path, class: "btn btn-outline-info" %> </a> </th>
+              <th> <a> <%= link_to t('.regg'), new_user_registration_path, class: "btn btn-outline-info" %> </a> </th>
+              <% end %>
+              <th> <%= link_to "Рус", { locale: :ru }, class: "btn btn-outline-secondary" %> </th>
+              <th> <%= link_to "En", { locale: :en }, class: "btn btn-outline-secondary" %> </th>
+            </tr>
+          </table>
+        </div>
+
+      </nav>
+    </div>
+
+    <div class="container main">
+      <div class="row">
+        <div class="col-md-12">
+          <% flash.each do |name, message| %>
+            <div class="alert <%= bootstrap_class_for(name) %>">
+              <button class="close" data-dismiss="alert">&times</button>
+              <%= message %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <%= yield %>
+    </div>
+
+  </body>
+</html>
